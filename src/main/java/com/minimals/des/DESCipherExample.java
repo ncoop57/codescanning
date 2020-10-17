@@ -10,7 +10,7 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 
-public class CipherExample {
+public class DESCipherExample {
     public static void main(String[] args) throws NoSuchAlgorithmException, NoSuchPaddingException, BadPaddingException, InvalidKeyException, IllegalBlockSizeException {
         KeyGenerator keygen = KeyGenerator.getInstance("DES");
         SecretKey key = keygen.generateKey();
