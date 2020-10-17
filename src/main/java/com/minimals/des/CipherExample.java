@@ -1,3 +1,5 @@
+package com.minimals.des;
+
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 
@@ -14,7 +16,7 @@ public class CipherExample {
         SecretKey key = keygen.generateKey();
 
         Cipher cipher;
-        cipher = Cipher.getInstance("DE$S".replace("$", ""));
+        cipher = Cipher.getInstance("DES");
 
         byte [] plaintext = "some text".getBytes();
         cipher.init(Cipher.ENCRYPT_MODE, key);
@@ -22,7 +24,7 @@ public class CipherExample {
         byte[] encrypted = cipher.doFinal(plaintext);
 
         Cipher decipher;
-        decipher = Cipher.getInstance("DE$S".replace("$", ""));
+        decipher = Cipher.getInstance("DES");
         decipher.init(Cipher.DECRYPT_MODE, key);
 
         byte[] deciphered = decipher.doFinal(encrypted);
